@@ -18,6 +18,8 @@ REQUIRED - Partition 1: `/dev/nvme0n1p1` => EFI SYSTEM : 500 MiB
 REQUIRED - Partition 2: `/dev/nvme0n1p2` => LINUX FILESYSTEM : ? GiB
 OPTIONAL - Partition 3: `/dev/nvme0n1p3` => LINUX SWAP : ? GiB (4GiB is recommended)
 ```
+If you're going to use swap, please uncomment the lines 43 and 44 of `arch-install-02`
+
 ## Script Execution
 
 After creating the drive partitions, you'll need to modify the name of the user, so it suits your needs. To do such task, all you need is `sed`

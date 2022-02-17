@@ -5,7 +5,6 @@ loadkeys la-latin1
 
 mkfs.fat /dev/nvme0n1p1
 mkfs.ext4 /dev/nvme0n1p2
-#swapon /dev/nvme0n1p3
 
 pacman -Syy
 pacman -S git
@@ -14,7 +13,7 @@ cd arch-install; git checkout gnome-install; cd ..
 
 mkdir /mnt/system
 mount /dev/nvme0n1p2 /mnt/system
-pacstrap /mnt/system linux-zen linux-zen-headers linux-firmware intel-ucode
+pacstrap /mnt/system linux-zen linux-zen-headers linux-firmware intel-ucode arch-install-scripts
 
 cp -R /root/arch-install /mnt/system/root/
 arch-chroot /mnt/system

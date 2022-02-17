@@ -40,6 +40,12 @@ mount /dev/nvme0n1p1 /boot
 cp -R /boot-install/* /boot
 bootctl install
 
+#echo "Enabling swap"
+#swapon /dev/nvme0n1p3
+
+echo "Populando fstab"
+genfstab -U / >> /etc/fstab
+
 echo "Bootctl loader.conf"
 cat << 'EOF' > /boot/loader/loader.conf
 default entries/arch.conf
