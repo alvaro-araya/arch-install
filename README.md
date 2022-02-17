@@ -1,6 +1,6 @@
 # Arch-Install
 
-##### Disclaimar: This scripts are made for intel-nvidia laptops
+##### Disclaimer: This scripts are made for intel-nvidia laptops
 
 ## Drive Partition
 
