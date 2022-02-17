@@ -23,5 +23,9 @@ OPTIONAL - Partition 3: `/dev/nvme0n1p3` => LINUX SWAP : ? GiB (4GiB is recommen
 After creating the drive partitions, you'll need to modify the name of the user, so it suits your needs. To do such task, all you need is `sed`
 
 ```bash
-cfdisk /dev/nvme0n1 
+sed -i 's/xyz/[your-user]/g' arch-install-02.sh
+sed -i 's/xyz/[your-user]/g' *arch-install-04.sh
+sed -i 's/xyz/[your-user]/g' *arch-install-05.sh
+sed -i 's/xyz/[your-user]/g' arch-install-03-as-user.sh
+sed -i 's/xyz/[your-user]/g' .zshrc
 ```
