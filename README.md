@@ -31,3 +31,6 @@ sed -i 's/xyz/[your-user]/g' *arch-install-05.sh
 sed -i 's/xyz/[your-user]/g' arch-install-03-as-user.sh
 sed -i 's/xyz/[your-user]/g' .zshrc
 ```
+Replace xyz -> username
+
+- cambio de v1.0
