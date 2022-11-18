@@ -1,19 +1,7 @@
 #!/bin/bash
 
-echo 'RGB'
-cat << 'EOF' > /etc/systemd/system/rgb.service
-[Unit]
-Description=XPG-RGB
-[Service]
-ExecStart=/etc/rgb/rgb.sh
-[Install]
-WantedBy=multi-user.target
-EOF
-
-systemctl enable rgb.service
-
 cat << 'EOF' > /etc/udev/rules.d/99-ite8291.rules
-SUBSYSTEMS=="usb", ATTRS{idVendor}=="048d", ATTRS{idProduct}=="ce00", MODE:="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="048d", ATTRS{idProduct}=="6006", MODE:="0666"
 EOF
 
 mkdir /etc/rgb
@@ -46,6 +34,18 @@ EOF
 chmod 755 /etc/rgb/rgb-low.sh
 echo 'RGB colors'
 cp rgb.colors /etc/rgb
+
+echo 'RGB'
+cat << 'EOF' > /etc/systemd/system/rgb.service
+[Unit]
+Description=XPG-RGB
+[Service]
+ExecStart=/etc/rgb/rgb.sh
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl enable rgb.service
 
 echo 'Pipewire'
 mkdir /etc/pipewire

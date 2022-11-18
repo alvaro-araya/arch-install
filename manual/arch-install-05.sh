@@ -1,17 +1,17 @@
 #!/bin/bash
 echo 'Paquetes de Pacman'
 # todo: GNOME
-pacman -S xorg xorg-server xorg-xinit glxinfo  \
-kitty gnome-keyring seahorse archlinux-wallpaper pipewire pipewire-{alsa,jack,media-session,pulse} easyeffects piper \
-openvpn networkmanager-l2tp networkmanager-openvpn iperf net-tools nmap dnsutils \
+pacman -S xorg xorg-server xorg-xinit glxinfo cinnamon cinnamon-screensaver nemo nemo-fileroller nemo-preview \
+kitty gnome-keyring seahorse archlinux-wallpaper pipewire pipewire-{alsa,jack,pulse} easyeffects piper \
+openvpn networkmanager-l2tp networkmanager-openvpn iperf net-tools nmap dnsutils openfortivpn \
 ghostwriter wget htop lsd pwgen fuse bat ncdu grc libreoffice-fresh hunspell hunspell-es_cr \
-remmina archlinux-keyring docker docker-compose mtr remmina freerdp ipcalc neofetch xclip mirage
+remmina archlinux-keyring docker docker-compose mtr remmina freerdp ipcalc neofetch xclip
 
 # todo: GNOME
-echo 'Cinnamon Session'
-cat << 'EOF' >> /home/xyz/.xinitrc
-exec cinnamon-session
-EOF
+#echo 'Cinnamon Session'
+#cat << 'EOF' >> /home/xyz/.xinitrc
+#exec cinnamon-session
+#EOF
 
 echo 'paru optimus-manager'
 echo 'Agregar el hook de optimus-manager como script de arranque Cinnamon'
@@ -41,7 +41,6 @@ echo 'paru jetbrainsmono'
 echo 'paru linphone-desktop'
 echo 'paru mirage'
 echo 'paru mysql-workbench-community'
-echo 'paru nerd-fonts-hack'
 echo 'paru optimus'
 echo 'paru papirus'
 echo 'paru postman'
